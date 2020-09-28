@@ -13076,34 +13076,119 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+<span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;&lt;script&gt;</span>
+<span class="s1">code_show=true;</span>
+<span class="s1">function code_toggle() {</span>
+<span class="s1"> if (code_show){</span>
+<span class="s1"> $(&#39;div.input&#39;).hide();</span>
+<span class="s1"> } else {</span>
+<span class="s1"> $(&#39;div.input&#39;).show();</span>
+<span class="s1"> }</span>
+<span class="s1"> code_show = !code_show</span>
+<span class="s1">}</span>
+<span class="s1">$( document ).ready(code_toggle);</span>
+<span class="s1">&lt;/script&gt;</span>
+<span class="s1">&lt;form action=&quot;javascript:code_toggle()&quot;&gt;&lt;input type=&quot;submit&quot; value=&quot;Click here to toggle on/off the raw code.&quot;&gt;&lt;/form&gt;&#39;&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<script>
+code_show=true;
+function code_toggle() {
+ if (code_show){
+ $('div.input').hide();
+ } else {
+ $('div.input').show();
+ }
+ code_show = !code_show
+}
+$( document ).ready(code_toggle);
+</script>
+<form action="javascript:code_toggle()"><input type="submit" value="Click here to toggle on/off the raw code."></form>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+<span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;style&gt;</span>
+<span class="s2">.output_png {</span>
+<span class="s2">    display: table-cell;</span>
+<span class="s2">    text-align: center;</span>
+<span class="s2">    vertical-align: middle;</span>
+<span class="s2">}</span>
+<span class="s2">&lt;/style&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+<style>
+.output_png {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+</style>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="The-Winner-Swimmer:-Predicting-Male-Infertility-through-KNN-Classifier">The Winner Swimmer: Predicting Male Infertility through KNN Classifier<a class="anchor-link" href="#The-Winner-Swimmer:-Predicting-Male-Infertility-through-KNN-Classifier">&#182;</a></h1><p>Prepared by: Manansala, Dorosan, Edeza, Gonzales, Licong, Marquez \
-<img src="picture.png"></p>
+<img src="src/picture.png"></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem">Problem<a class="anchor-link" href="#Problem">&#182;</a></h1><p>For several decades, <strong>Male fertility</strong> rates have been declining. As Male infertility accounts for <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4691969/">40% of all infertility cases </a> , this downward trend is quite worrying. Low fertility rates are usually associated with <a href="https://www.nber.org/digest/jul09/w14820.html">diminished economic growth</a> particularly due to a decline in workers per capita. This decrease in labor supply would especially be felt in countries where the elderly are already retired and receive social security from the government.</p>
+<h1 id="1.-Introduction">1. Introduction<a class="anchor-link" href="#1.-Introduction">&#182;</a></h1><p>For several decades, <strong>Male fertility</strong> rates have been declining. As Male infertility accounts for <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4691969/">40% of all infertility cases </a> , this downward trend is quite worrying. Low fertility rates are usually associated with <a href="https://www.nber.org/digest/jul09/w14820.html">diminished economic growth</a> particularly due to a decline in workers per capita. This decrease in labor supply would especially be felt in countries where the elderly are already retired and receive social security from the government.</p>
 <p>The factors that determine fertility rates are varied, ranging from <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4255510/#:~:text=The%20social%20structure%2C%20religious%20beliefs,rates%20are%20low%2C%20birth%20control">culture, cost of raising children, and urbanization</a>. These factors all require long term solutions which will be quite costly. One factor that can be tackled straightforward though is medical infertility, as factors such as those previously mentioned affect a persons choice and not their ability to have children.</p>
 <p>People who are infertile for medical reasons can be given treatment to help them become fertile. This task would be much easier for governments to do as compared to changing a country's culture or providing education subsidies. However, to be able to treat infertility we must be able to <strong>diagnose it</strong>.</p>
 <p>Conducting a mass fertility test on an entire population can be quite costly, both in the collection phase as well as the testing phase. However, If we are able to gather information that has a high correlation with fertility then it would simply be a matter of databasing patient records and running algorithms to identify potential infertile subjects. The factors we look at in this notebook are <strong>environment</strong>, <strong>medical history</strong>, and <strong>lifestyle</strong>. These factors have been studied with <a href="https://www.lunduniversity.lu.se/lup/publication/a53191fb-fa38-4d82-8f8a-d382253e0915">artificial intelligence and have shown promising results</a>.</p>
 <p>The problem would then be to see if there are any variables that are strongly correlated with infertility and if a Machine Learning algorithm would be able to accurately predict if a person is <strong>fertile</strong> or <strong>infertile</strong>.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Highlights">Highlights<a class="anchor-link" href="#Highlights">&#182;</a></h2><p>Three Highlights of the k-NN Classifier are:</p>
-<ol>
-<li>Smoking has the highest sensitivity that can deteriorate fertility in men.</li>
-<li>Historic medical complications* affect fertility as high as smoking does.</li>
-<li>Alcohol intake didn’t yield high sensitivity to influence male fertility.</li>
-</ol>
-<p>*<i><sup>Prolonged high fever, child diseases (mumps, measles, and others), surgical intervention</sup></i></p>
 
 </div>
 </div>
@@ -13137,7 +13222,7 @@ div#notebook {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">column_names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;season&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;childish_disease&#39;</span><span class="p">,</span> <span class="s1">&#39;Acc_trauma&#39;</span><span class="p">,</span> 
               <span class="s1">&#39;surgical_int&#39;</span><span class="p">,</span> <span class="s1">&#39;high_fevers&#39;</span><span class="p">,</span> <span class="s1">&#39;alcohol_freq&#39;</span><span class="p">,</span> <span class="s1">&#39;smoking&#39;</span><span class="p">,</span> 
               <span class="s1">&#39;sitting_hours&#39;</span><span class="p">,</span> <span class="s1">&#39;target&#39;</span><span class="p">]</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;fertility_Diagnosis.txt&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="n">column_names</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;src/fertility_Diagnosis.txt&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="n">column_names</span><span class="p">)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
@@ -13259,16 +13344,6 @@ div#notebook {
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Custom-Functions">Custom Functions<a class="anchor-link" href="#Custom-Functions">&#182;</a></h3><ol>
-<li><code>knn_dataset</code></li>
-<li><code>plot_accuracy</code></li>
-</ol>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -13340,74 +13415,9 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="EDA-and-KNN-Implementation-on-the-Fertility-Dataset">EDA and KNN Implementation on the Fertility Dataset<a class="anchor-link" href="#EDA-and-KNN-Implementation-on-the-Fertility-Dataset">&#182;</a></h2>
+<h2 id="2.-Exploratory-Data-Analysis">2. Exploratory Data Analysis<a class="anchor-link" href="#2.-Exploratory-Data-Analysis">&#182;</a></h2>
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The dataset shape: </span><span class="si">{df.shape}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Checking for nulls...&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">any</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Data type of each column:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">())</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>The dataset shape: (100, 10)
-
-Checking for nulls...
-season              False
-age                 False
-childish_disease    False
-Acc_trauma          False
-surgical_int        False
-high_fevers         False
-alcohol_freq        False
-smoking             False
-sitting_hours       False
-target              False
-dtype: bool
-
-Data type of each column:
-
-&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 100 entries, 0 to 99
-Data columns (total 10 columns):
- #   Column            Non-Null Count  Dtype  
----  ------            --------------  -----  
- 0   season            100 non-null    float64
- 1   age               100 non-null    float64
- 2   childish_disease  100 non-null    int64  
- 3   Acc_trauma        100 non-null    int64  
- 4   surgical_int      100 non-null    int64  
- 5   high_fevers       100 non-null    int64  
- 6   alcohol_freq      100 non-null    float64
- 7   smoking           100 non-null    int64  
- 8   sitting_hours     100 non-null    float64
- 9   target            100 non-null    object 
-dtypes: float64(4), int64(5), object(1)
-memory usage: 7.9+ KB
-None
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -13447,7 +13457,7 @@ Accuracy to beat* is  0.986
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="KNN-Implementation">KNN Implementation<a class="anchor-link" href="#KNN-Implementation">&#182;</a></h3><p>An initial Accuracy vs n_neighbors plot is shown using the <code>plot_accuracy()</code> fuction with the following parameters:</p>
+<h3 id="2.1.-KNN-Implementation">2.1. KNN Implementation<a class="anchor-link" href="#2.1.-KNN-Implementation">&#182;</a></h3><p>An initial Accuracy vs n_neighbors plot is shown using the <code>plot_accuracy()</code> fuction with the following parameters:</p>
 <ul>
 <li>100 trials</li>
 <li>train-test split is at 75%-25%</li>
@@ -13566,8 +13576,8 @@ Accuracy to beat* is  0.986
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Training Accuracy at 7 nearest neighbors: 0.88
-Test Accuracy at 7 nearest neighbors: 0.88
+<pre>Training Accuracy at 7 nearest neighbors: 0.8533333333333334
+Test Accuracy at 7 nearest neighbors: 0.96
 </pre>
 </div>
 </div>
@@ -13586,7 +13596,7 @@ Test Accuracy at 7 nearest neighbors: 0.88
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Sensitivity-Analysis">Sensitivity Analysis<a class="anchor-link" href="#Sensitivity-Analysis">&#182;</a></h3><h4 id="Approach-A:-Individual-KNNs-for-each-Feature">Approach A: Individual KNNs for each Feature<a class="anchor-link" href="#Approach-A:-Individual-KNNs-for-each-Feature">&#182;</a></h4><p>To determine the impact of each feature to our model, we conducted a sensitivity analysis by performing individual KNNs (one for each feature-target pair) and solved for the accuracy scores using the <code>cross_val_score()</code> funtion. The results are shown below.</p>
+<h3 id="2.2.-Sensitivity-Analysis">2.2. Sensitivity Analysis<a class="anchor-link" href="#2.2.-Sensitivity-Analysis">&#182;</a></h3><h4 id="Approach-A:-Individual-KNNs-for-each-Feature">Approach A: Individual KNNs for each Feature<a class="anchor-link" href="#Approach-A:-Individual-KNNs-for-each-Feature">&#182;</a></h4><p>To determine the impact of each feature to our model, we conducted a sensitivity analysis by performing individual KNNs (one for each feature-target pair) and solved for the accuracy scores using the <code>cross_val_score()</code> funtion. The results are shown below.</p>
 
 </div>
 </div>
@@ -13705,7 +13715,8 @@ Test Accuracy at 7 nearest neighbors: 0.88
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="KNN-Classification-with-Oversampling">KNN Classification with Oversampling<a class="anchor-link" href="#KNN-Classification-with-Oversampling">&#182;</a></h2>
+<h3 id="2.3.-KNN-Classification-with-Oversampling">2.3. KNN Classification with Oversampling<a class="anchor-link" href="#2.3.-KNN-Classification-with-Oversampling">&#182;</a></h3><p>By using oversampling, the updated class distribution and the new PCC to beat are:</p>
+
 </div>
 </div>
 </div>
@@ -13716,26 +13727,9 @@ Test Accuracy at 7 nearest neighbors: 0.88
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_sample</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;O&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">72</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">df_oversampled</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df_sample</span><span class="p">)</span>
-<span class="n">df_oversampled</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>(172, 10)</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -13820,7 +13814,7 @@ Accuracy to beat* is  0.6253380205516496
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Plot-the-accuracy-of-training-and-test-dataset">Plot the accuracy of training and test dataset<a class="anchor-link" href="#Plot-the-accuracy-of-training-and-test-dataset">&#182;</a></h3>
+<h4 id="Plot-the-accuracy-of-training-and-test-dataset">Plot the accuracy of training and test dataset<a class="anchor-link" href="#Plot-the-accuracy-of-training-and-test-dataset">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13846,7 +13840,7 @@ Accuracy to beat* is  0.6253380205516496
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Discussion-of-Results">Discussion of Results<a class="anchor-link" href="#Discussion-of-Results">&#182;</a></h2>
+<h2 id="3.-Discussion-of-Results">3. Discussion of Results<a class="anchor-link" href="#3.-Discussion-of-Results">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13888,14 +13882,40 @@ Accuracy to beat* is  0.6253380205516496
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Reference:</p>
+<h2 id="4.-Conclusion">4. Conclusion<a class="anchor-link" href="#4.-Conclusion">&#182;</a></h2><p>Three conclusions drawn from the k-NN Classifier are:</p>
 <ol>
+<li>Smoking has the highest sensitivity that can deteriorate fertility in men.</li>
+<li>Historic medical complications* affect fertility as high as smoking does.</li>
+<li>Alcohol intake didn’t yield high sensitivity to influence male fertility.</li>
+</ol>
+<p>*<i><sup>Prolonged high fever, child diseases (mumps, measles, and others), surgical intervention</sup></i></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="5.-Reference">5. Reference<a class="anchor-link" href="#5.-Reference">&#182;</a></h2><ol>
 <li>Fertility Dataset; UCI Machine Learning Repository; <a href="https://archive.ics.uci.edu/ml/datasets/Fertility">https://archive.ics.uci.edu/ml/datasets/Fertility</a></li>
 <li>"Semen Parameters can be Predicted from Environmental Factors and Lifestyle using Aritificial Intelligence Methods" by: Jose L. Girela1, David Gil2, Magnus Johnsson, María José Gomez-Torres, and Joaquín De Juan</li>
 </ol>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create HTML version of this notebook</span>
+<span class="o">!</span>jupyter nbconvert <span class="s2">&quot;The Winner Swimmer.ipynb&quot;</span> --no-prompt
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
